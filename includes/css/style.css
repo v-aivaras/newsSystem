@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: #282828;
+}
+
+a:hover {
+    color: #000;
+}
+
+body {
+    color: #282828;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(125deg, #fadddd, #bac6f3);
+}
+
+.loginContainer {
+    min-height: 100vh;
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContainer form {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.885);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer h2 {
+    color: #9dacc7;
+}
+
+.loginContainer,
+.loginContainer input {
+    border-radius: 7px;
+}
+
+.loginContainer .errorMessage {
+    color: rgb(250, 17, 17);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.loginContainer input[type="text"],
+.loginContainer input[type="password"] {
+    border: 2px solid #9dacc7;
+    outline: none;
+    margin: 10px 0;
+    display: block;
+    padding: 8px;
+    width: 80%;
+}
+
+.button,
+.smallButton {
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.719);
+    padding: 8px 16px;
+    cursor: pointer; 
+    border: 2px solid #9dacc7;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.button:hover,
+.smallButton:hover {
+    background-color: #9dacc7ab;
+    border: 2px solid transparent;
+}
+
+.smallButton {
+    width: 90px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    padding: 4px 10px;
+    border: 1px solid #9dacc7;
+}
+
+.smallButton:hover {
+    border: 1px solid transparent;
+}
+
+.formContainer {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form.filter {
+    width: 70%;
+    text-align: right;
+}
+
+.mainContainer {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    min-width: 870px;
+    max-width:1366px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mainContainer nav {
+    width: 100%;
+    text-align: right;
+    padding: 15px;
+    border-bottom: 1px solid #9a9a9a;
+}
+
+.mainContainer nav .button {
+    margin-right: 10px;
+}
+
+.mainContainer .content {
+    margin-top: 25px;
+}
+.mainContainer .content,
+.mainContainer table {
+    width: 100%;
+    text-align: center;
+}
+
+.mainContainer table {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 15px;
+}
+
+.mainContainer table td,
+.mainContainer table th {
+    padding: 5px 5px;
+}
+
+.mainContainer table tr:nth-of-type(2n-1) {
+    background-color: rgba(255, 255, 255, 0.774);
+}
+
+.mainContainer .errorMessage,
+.mainContainer .successMessage {
+    width: 50%;
+    color: rgb(250, 17, 17);
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.mainContainer .successMessage {
+    color: #4bb543
+}
+
+.mainContainer .errorMessage {
+    color: rgb(250, 17, 17);
+}
+
+form.addNew {
+    width: 95%;
+    text-align: center;
+    margin: 25px auto;
+}
+
+select {
+    padding: 4px;
+}
+
+input[type="datetime-local"] {
+    padding: 2px;
+}
+
+#cke_full {
+    margin-top: 7px;
+}
+
+form.addNew textarea {
+    margin-top: 7px;
+    padding: 10px;
+    width: 70%;
+    height: 60px;
+    resize: none;
+}
+
+.newsInfo {
+    font-size: 13px;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.newsInfo span {
+    white-space: nowrap;
+}
+
+.newsInfo span::after {
+    content: "|";
+    margin-left: 4px;
+}
+
+.newsInfo span:last-of-type:after {
+    content: "";
+}
+
+.newsBody {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 7px;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.newsBody .title{
+    text-align: center;
+}
+
+@media only screen and (max-width: 870px) {
+    .mainContainer {
+        min-width: 500px;
+    }
+
+    .mainContainer table th:nth-of-type(4),
+    .mainContainer table td:nth-of-type(4),
+    .mainContainer table th:nth-of-type(5),
+    .mainContainer table td:nth-of-type(5),
+    .mainContainer table th:nth-of-type(6),
+    .mainContainer table td:nth-of-type(6) {
+        display: none;
+    }
+
+    .formContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: 75px;
+    }
+
+    form.filter {
+        width: 100%;
+        text-align: center;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
