@@ -5,6 +5,9 @@
     if(empty($_SESSION['user'])) {
         header('Location: login.php');
     }
+
+
+    
 ?>
 
 <!DOCTYPE html>
